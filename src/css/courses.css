@@ -1,0 +1,45 @@
+.course-img {
+  @apply bg-cover w-full h-[300px] relative top-0 left-0 bg-center;
+}
+.course-img.num1 {
+  @apply bg-[url("../imgs/course-01.jpg")];
+}
+.course-img.num2 {
+  @apply bg-[url("../imgs/course-02.jpg")];
+}
+.course-img.num3 {
+  @apply bg-[url("../imgs/course-05.jpg")];
+}
+.course-img.num4 {
+  @apply bg-[url("../imgs/course-04.jpg")];
+}
+.course-img.num5 {
+  @apply bg-[url("../imgs/course-03.jpg")];
+}
+.course-img.num6 {
+  @apply bg-[url("../imgs/course-02.jpg")];
+}
+.course-img.num7 {
+  @apply bg-[url("../imgs/course-05.jpg")];
+}
+.course-img.num8 {
+  @apply bg-[url("../imgs/course-04.jpg")];
+}
+.course-img.num9 {
+  @apply bg-[url("../imgs/course-03.jpg")];
+}
+.course-img.num10 {
+  @apply bg-[url("../imgs/course-02.jpg")];
+}
+.Course-Info {
+  @apply top-[40px] relative inline-block text-white my-5 w-fit self-center;
+}
+.info-cash {
+  @apply border-t border-backgroundcolor2;
+}
+.Course-Info:hover {
+  @apply brightness-[0.8];
+}
+.box-m {
+  @apply !p-0 overflow-hidden relative;
+}

@@ -1,0 +1,24 @@
+.box-ms {
+  @apply relative p-5;
+}
+.i-head {
+  @apply z-2 absolute top-[15px] left-[15px];
+}
+.i-head i {
+  @apply bg-backgroundcolor2 transition-all rounded-full flex items-center justify-center cursor-pointer w-[30px] h-[30px];
+}
+.i-head i:hover {
+  @apply text-white bg-backgroundcolor3;
+}
+.friend-img img {
+  @apply w-[100px] rounded-full;
+}
+.body-i i {
+  @apply w-[25px];
+}
+.vip h2 {
+  @apply uppercase text-[#f59f0b49] text-[3rem];
+}
+.Joined .btn-shape {
+  @apply text-white;
+}

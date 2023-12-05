@@ -1,0 +1,604 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  @apply select-none;
+}
+.cilck-span {
+  @apply cursor-pointer bg-[#ccc] w-[80px] h-[30px] rounded-[50px] inline-block relative transition-all;
+}
+.cilck-span::after {
+  content: "\2716";
+  @apply font-extrabold text-[1.2rem] bg-white h-[25px] w-[25px] text-[#aaa] transition-all flex absolute rounded-full left-[5px] items-center justify-center;
+}
+.cilck > input {
+  @apply hidden w-0 h-0;
+}
+.cilck > input:checked + span {
+  @apply bg-backgroundcolor3;
+}
+.cilck > input:checked + span::after {
+  content: "\2713";
+  @apply rotate-[1turn] translate-x-[45px];
+}
+.cilck.prof > input:checked + span::after {
+  content: "\2713";
+  @apply rotate-[1turn] translate-x-[45px];
+}
+.sm-1-hight {
+  @apply h-[30px] w-[80px];
+}
+.sm-1-hight::after {
+  @apply h-[25px] w-[25px] flex items-center justify-center text-[1rem]  left-[3px];
+}
+
+.btn-shape {
+  @apply p-[5px] block text-center rounded;
+}
+
+.color-font-red {
+  @apply text-backgroundcolor10;
+}
+.color-font-blue {
+  @apply text-backgroundcolor3;
+}
+.color-red {
+  @apply bg-backgroundcolor10;
+}
+.color-white {
+  @apply text-white;
+}
+.color-font-green {
+  @apply text-backgroundcolor9;
+}
+
+.del-op-4 {
+  @apply line-through opacity-40;
+}
+.del-op-2 {
+  @apply line-through opacity-30;
+}
+.flex-gap-5-column {
+  @apply flex flex-col gap-[5px];
+}
+.center-j {
+  @apply flex  justify-center;
+}
+.center-a {
+  @apply flex  items-center;
+}
+.center-a-flex-end {
+  @apply flex  items-end;
+}
+.flex-gap-10-row {
+  @apply flex gap-[10px];
+}
+.flex-gap-5-row {
+  @apply flex gap-[5px];
+}
+.flex-gap-10-column {
+  @apply flex flex-col gap-[10px];
+}
+.flex-gap-5-column {
+  @apply flex flex-col gap-[5px];
+}
+.flex-column {
+  @apply flex flex-col;
+}
+.flex-gap-20-column {
+  @apply flex flex-col gap-5;
+}
+.flex-gap-20-row {
+  @apply flex  gap-5;
+}
+.flex-gap-20-row-space-between {
+  @apply flex justify-between gap-5;
+}
+.width-1 {
+  @apply w-[60px] h-[60px];
+}
+.width-2 {
+  @apply w-[80px] h-[80px];
+}
+/* freamwork */
+* {
+  @apply p-0 m-0 box-border font-Open decoration-0 capitalize;
+}
+
+/* tailwind */
+.parents {
+  grid-template-areas: "aside header" "aside main";
+  @apply grid   grid-cols-parentsm md:grid-cols-parent grid-rows-parent;
+}
+aside {
+  @apply z-2 p-0 items-center md:items-stretch gap-1 w-full shadow-aside flex flex-col;
+  grid-area: aside;
+}
+aside h2 {
+  @apply p-2 text-base font-bold md:text-3xl md:border-b-4 border-black relative md:w-full md:py-8 md:px-4 text-center self-center;
+}
+aside h2::after {
+  content: "";
+  @apply w-6 h-6 translate-x-[-50%] translate-y-[56%]  absolute bg-black bottom-0 left-1/2 border-4 border-white rounded-full;
+}
+aside a:first-of-type {
+  @apply md:mt-[30px];
+}
+aside a {
+  @apply flex hover:bg-choosecolor1 items-center md:px-0  p-4 md:py-3  transition-all rounded-md text-black gap-3 whitespace-nowrap;
+}
+aside a p {
+  @apply hidden md:block;
+}
+aside > h2::after {
+  @apply hidden md:block;
+}
+aside i {
+  @apply flex items-center w-max md:w-8 justify-center pl-0 md:pl-[10px] md:block;
+}
+
+aside a.choose {
+  @apply bg-choosecolor1;
+}
+
+header {
+  @apply flex justify-between items-center;
+}
+.header-search {
+  @apply h-[60px] w-fit rounded-md gap-2 items-center whitespace-nowrap flex border border-black;
+}
+.header-search:has(#search:focus) + .bell {
+  @apply hidden md:flex;
+}
+#search:focus {
+  @apply w-[160px];
+}
+#search:focus::placeholder {
+  @apply opacity-0;
+}
+#search::placeholder {
+  @apply opacity-100 transition-all;
+}
+#search {
+  @apply w-[140px] bg-transparent border-0 outline-none transition-all;
+}
+header .bell {
+  @apply flex gap-[10px] items-center;
+}
+header .bell i {
+  @apply text-2xl relative;
+}
+/* fasfasfasfas */
+
+header .bell i::after {
+  content: "";
+  @apply absolute bg-red-700 top-0 right-0 w-[12px] h-[12px] rounded-full;
+}
+header .bell img {
+  @apply w-[35px];
+}
+main {
+  @apply bg-backgroundcolor1;
+}
+main h1 {
+  @apply relative w-fit ml-[10px] font-bold;
+}
+main > h1::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-black via-white to-white;
+}
+.containers {
+  grid-area: main;
+  @apply grid my-[10px] grid-cols-[100%]  md:grid-cols-containermd  gap-5;
+}
+.containers > div {
+  @apply flex p-[10px]  md:p-5 flex-col rounded-lg bg-white;
+}
+.containers > div > h2 {
+  @apply mb-[10px];
+}
+.containers > div > p {
+  @apply mb-[10px];
+}
+.Welcome {
+  @apply rounded-xl bg-white flex overflow-hidden flex-col;
+  background-image: linear-gradient(to bottom, #eee 32%, white 30%);
+}
+.Welcome .head {
+  @apply h-[152px];
+}
+.Welcome .head {
+  @apply flex justify-between;
+}
+
+.Welcome .head img {
+  @apply w-[190px] self-end;
+}
+.Welcome > .head > img {
+  @apply hidden md:block;
+}
+.Welcome .body {
+  @apply mt-[7px] flex-col md:flex-row content-center md:content-stretch md:mt-0 gap-5  md:gap-0 flex flex-wrap justify-around border-y border-y-bordercolor1;
+}
+.Welcome .profile-img {
+  @apply h-[50px] relative;
+}
+
+.Welcome .profile-img::after {
+  content: "";
+  @apply border-[5px] border-white bg-[url(./imgs/avatar.png)] shadow-aside translate-x-[-50%] translate-y-[-95%]  md:transform-none top-1/2 left-1/2 w-[70px] h-[70px] absolute rounded-full z-42 md:top-[-42px] md:left-[28px] bg-center bg-cover;
+}
+
+.Welcome .body div {
+  @apply w-[100px] flex flex-col gap-[10px] text-center;
+}
+.Welcome .body div p:nth-of-type(2) {
+  @apply opacity-50;
+}
+.Welcome .link {
+  @apply flex h-[28%] items-center flex-row-reverse;
+}
+.Welcome .link > a {
+  @apply bg-backgroundcolor3 rounded mt-8 h-[38.4px] py-[10px] px-5 text-white inline-block;
+}
+.quick-draft {
+  @apply bg-white;
+}
+.quick-draft form :is(input, textarea) {
+  @apply outline-none border-2 bg-backgroundcolor2 mb-[10px] p-[10px] resize-none w-full rounded-md;
+}
+
+.quick-draft form #submit {
+  @apply cursor-pointer hover:brightness-50 bg-backgroundcolor3 text-white font-semibold rounded-br-[30px] rounded-bl-[30px] md:border-0;
+}
+
+.yearlay-targets .card {
+  @apply flex items-center gap-[10px];
+}
+.yearlay-targets i {
+  @apply h-[77px] min-w-[77px] flex items-center justify-center text-2xl;
+}
+.yearlay-targets .card > div {
+  @apply w-full bg-white;
+}
+.yearlay-targets .card .prog {
+  @apply h-[10px] w-full z-2 relative bg-backgroundcolor4;
+}
+
+.yearlay-targets .card .prog span {
+  @apply h-[10px] inline-block absolute;
+}
+
+.yearlay-targets .card.money .prog {
+  @apply bg-backgroundcolor4;
+}
+.yearlay-targets .card.Projects .prog {
+  @apply bg-backgroundcolor6;
+}
+.yearlay-targets .card.Team .prog {
+  @apply bg-backgroundcolor8;
+}
+.yearlay-targets .money i {
+  @apply bg-backgroundcolor4 text-backgroundcolor3;
+}
+.yearlay-targets .Projects i {
+  @apply bg-backgroundcolor6 text-backgroundcolor7;
+}
+.yearlay-targets .Team i {
+  @apply bg-backgroundcolor8 text-backgroundcolor9;
+}
+.yearlay-targets .card .prog span::after {
+  content: attr(data-prog);
+  @apply h-full top-[-30px] right-[-20px] absolute p-[10px]  flex items-center rounded-md text-white z-2;
+}
+.yearlay-targets .card .prog span::before {
+  content: "";
+  @apply w-0 h-0 absolute  border-[5px] z-[5] top-[-10px] right-[-5px];
+}
+
+.yearlay-targets .card.money .prog span {
+  @apply bg-backgroundcolor5;
+}
+.yearlay-targets .card.money .prog span::after {
+  @apply bg-backgroundcolor5;
+}
+.yearlay-targets .card.money .prog span::before {
+  @apply border-x-transparent border-t-backgroundcolor5 border-b-transparent;
+}
+.yearlay-targets .card.Projects .prog span {
+  @apply bg-backgroundcolor7;
+}
+.yearlay-targets .card.Projects .prog span::after {
+  @apply bg-backgroundcolor7;
+}
+.yearlay-targets .card.Projects .prog span::before {
+  @apply border-x-transparent border-t-backgroundcolor7 border-b-transparent;
+}
+.yearlay-targets .card.Team .prog span {
+  @apply bg-backgroundcolor9;
+}
+.yearlay-targets .card.Team .prog span::after {
+  @apply bg-backgroundcolor9;
+}
+.yearlay-targets .card.Team .prog span::before {
+  @apply border-x-transparent border-t-backgroundcolor9 border-b-transparent;
+}
+
+.Tickets-Statistics > div {
+  @apply flex-wrap;
+}
+.Tickets-Statistics div div {
+  @apply border-black items-center rounded-xl border py-[34px] basis-[100%] md:basis-[48%];
+}
+
+.Tickets-Statistics div div .we-bold {
+  @apply text-[1.4rem];
+}
+.Tickets-Statistics div div i {
+  @apply text-[1.5rem];
+}
+.Tickets-Statistics div div:nth-of-type(1) i {
+  @apply text-backgroundcolor7;
+}
+.Tickets-Statistics div div:nth-of-type(2) i {
+  @apply text-backgroundcolor3;
+}
+.Tickets-Statistics div div:nth-of-type(3) i {
+  @apply text-backgroundcolor9;
+}
+.Tickets-Statistics div div:nth-of-type(4) i {
+  @apply text-backgroundcolor10;
+}
+
+.Latest-News > div > div {
+  @apply justify-between flex-col md:flex-row py-[13px] items-center;
+}
+.Latest-News > div > div:not(:last-child) {
+  @apply border-b border-backgroundcolor2;
+}
+
+.Latest-News > div > div > p {
+  @apply self-center md:self-auto rounded-md bg-backgroundcolor2 text-[.8rem] flex items-center justify-center h-1/2 w-[101px] p-[5px];
+}
+
+.Latest-News > div > div > div > img {
+  @apply w-[130px] rounded;
+}
+
+.Latest-News > div > div > div {
+  @apply flex-col md:flex-row items-center;
+}
+
+.Latest-News div > div > div div p {
+  @apply self-start;
+}
+.Latest-News div > div > div div p.we-bold {
+  @apply text-[1.2rem];
+}
+@media (max-width: 767px) {
+  .Latest-News {
+    @apply items-center;
+  }
+  .Latest-News > div {
+    @apply text-center;
+  }
+}
+
+.latest-tasks .we-bold {
+  @apply text-[1rem];
+}
+.latest-tasks > div > div:not(:last-child) {
+  @apply border-b-backgroundcolor2;
+}
+
+.latest-tasks .flex-gap-10-row {
+  @apply justify-between items-center p-[15px];
+}
+.latest-tasks i {
+  @apply cursor-pointer transition-all;
+}
+.latest-tasks i:hover {
+  @apply text-backgroundcolor10;
+}
+.Top-Search-Items .flex-gap-10-row {
+  @apply justify-between items-center;
+}
+.Top-Search-Items > div > div:nth-of-type(1) {
+  @apply py-[10px];
+}
+.Top-Search-Items > div > div > p:nth-of-type(2):not(.not) {
+  @apply text-[.8rem] bg-backgroundcolor2 flex justify-center items-center h-[40px] w-[50px] p-[5px] rounded;
+}
+
+.Latest-Uploads h3 {
+  @apply pb-[10px];
+}
+.Latest-Uploads > div > div {
+  @apply justify-between items-center;
+}
+.Latest-Uploads > div > div div {
+  @apply flex-1;
+}
+.Latest-Uploads > div > div svg {
+  @apply max-w-[50px];
+}
+.Latest-Uploads > div > div > p {
+  @apply text-[.8rem] bg-backgroundcolor2 flex justify-center items-center h-[40px] w-[50px] p-[5px] rounded;
+}
+
+.Last-Project-Progress div div:nth-of-type(1) {
+  @apply mt-[10px];
+}
+.Last-Project-Progress div div {
+  @apply h-[50px];
+}
+.Last-Project-Progress div p:nth-of-type(1) {
+  @apply relative outline-2 outline rounded-full outline-backgroundcolor3 border-[3px] border-white flex w-[20px] h-[20px] items-center justify-center bg-backgroundcolor3;
+}
+.Last-Project-Progress div p.not {
+  @apply bg-white;
+}
+.Last-Project-Progress div p.work-on {
+  animation: work-on 2s linear infinite;
+  -webkit-animation: work-on 2s linear infinite;
+
+  @apply opacity-100;
+}
+@keyframes work-on {
+  0%,
+  100% {
+    @apply bg-white;
+  }
+  50% {
+    @apply bg-backgroundcolor3;
+  }
+}
+
+.Last-Project-Progress div p:nth-of-type(1):not(.not) {
+  @apply after:bg-backgroundcolor3 after:absolute after:top-[122%] after:w-[2px] after:h-[38px];
+}
+.Reminders div div {
+  @apply relative ml-[30px] pl-[15px] border-l flex justify-around;
+}
+.Reminders div div {
+  @apply before:absolute before:left-[-31px] before:w-[15px] before:h-[15px] before:rounded-full;
+}
+.Reminders div div:nth-of-type(4):before {
+  @apply bg-red-800;
+}
+.Reminders div div:nth-of-type(4) {
+  @apply border-red-700;
+}
+
+.Reminders div div:nth-of-type(3):before {
+  @apply bg-backgroundcolor7;
+}
+.Reminders div div:nth-of-type(3) {
+  @apply border-backgroundcolor7;
+}
+.Reminders div div:nth-of-type(2):before {
+  @apply bg-backgroundcolor9;
+}
+.Reminders div div:nth-of-type(2) {
+  @apply border-backgroundcolor9;
+}
+.Reminders div div:nth-of-type(1):before {
+  @apply bg-backgroundcolor3;
+}
+.Reminders div div:nth-of-type(1) {
+  @apply border-backgroundcolor3;
+}
+
+.Latest-Post div div .line-hight {
+  @apply pt-[10px] pb-[30px];
+}
+.Latest-Post div div.latest-img {
+  @apply pt-[10px] pb-[20px] pl-[60px] relative;
+}
+
+.latest-img::after {
+  content: "";
+  @apply rounded-full bg-[url("./imgs/avatar.png")] w-[45px] h-[45px] left-0 absolute bg-cover bg-center;
+}
+
+.Social-Media-Stats div div.flex-gap-20-row-space-between {
+  @apply flex items-center;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between a {
+  @apply text-white h-fit w-[70px] text-center p-[5px] mr-[10px] text-[.8rem] rounded;
+}
+
+.Social-Media-Stats div div.flex-gap-20-row-space-between I {
+  @apply flex text-white text-[1.5rem] mr-[10px] items-center justify-center h-[50px] w-[50px];
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.twiter I {
+  @apply bg-backgroundcolor11;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.facebook I {
+  @apply bg-backgroundcolor3;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.youtube I {
+  @apply bg-backgroundcolor10;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.linkedin I {
+  @apply bg-backgroundcolor3;
+}
+
+.Social-Media-Stats div div.flex-gap-20-row-space-between.twiter a {
+  @apply bg-backgroundcolor11;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.facebook a {
+  @apply bg-backgroundcolor3;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.youtube a {
+  @apply bg-backgroundcolor10;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.linkedin a {
+  @apply bg-backgroundcolor3;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.twiter {
+  @apply bg-backgroundcolor13;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.facebook {
+  @apply bg-backgroundcolor4;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.youtube {
+  @apply bg-backgroundcolor12;
+}
+.Social-Media-Stats div div.flex-gap-20-row-space-between.linkedin {
+  @apply bg-backgroundcolor4;
+}
+
+/* Social-Media-Stats */
+.responsive-table {
+  @apply p-5 grid  gap-5 rounded-lg bg-white grid-cols-responsive-table;
+}
+.table {
+  @apply py-[10px] block overflow-x-auto;
+}
+table {
+  @apply w-full min-w-[1000px] py-[10px] border-spacing-0;
+}
+tr {
+  @apply h-[60px];
+}
+thead tr {
+  @apply font-bold bg-backgroundcolor2;
+}
+thead tr td {
+  @apply w-[300px] font-bold bg-backgroundcolor2;
+}
+td {
+  @apply p-[10px];
+}
+
+tbody td {
+  @apply border-[2px] border-backgroundcolor2;
+}
+tr td img {
+  @apply mr-[-15px] w-[30px] rounded-full;
+}
+
+::-webkit-scrollbar {
+  @apply w-[10px] h-[10px] bg-backgroundcolor1;
+}
+::-webkit-scrollbar-thumb {
+  @apply w-[5px] rounded-[50%];
+}
+/* main */
+
+.team-img {
+  @apply z-[1] top-[15px] left-[15px] absolute w-[80px] rounded-full border-2 border-white;
+}
+
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-2xl font-bold;
+}
+h3 {
+  @apply text-2xl font-semibold pb-3;
+}

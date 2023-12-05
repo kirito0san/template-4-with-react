@@ -1,0 +1,54 @@
+.files {
+  grid-template-areas:
+    "files-page   files-stats"
+    "files-page   .";
+  @apply grid gap-5 my-[10px] !grid-cols-files1;
+}
+@media (max-width: 767px) {
+  .files {
+    grid-template-areas:
+      "files-stats"
+      "files-page ";
+    @apply !grid-cols-[100%];
+  }
+}
+.files-stats-box {
+  @apply border border-backgroundcolor2 rounded-xl;
+}
+.files-stats-box > div > i {
+  @apply w-[50px] h-[50px] flex items-center justify-center;
+}
+.files-stats {
+  grid-area: files-stats;
+  @apply !p-[10px];
+}
+.files-stats a {
+  @apply w-fit p-[10px] self-center rounded-xl;
+}
+
+.files-stats a:hover i {
+  animation: up-down linear 0.3s infinite alternate;
+  -webkit-animation: up-down linear 0.3s infinite alternate;
+}
+
+@keyframes up-down {
+  to {
+    @apply translate-y-[-5px];
+  }
+}
+.files-page {
+  grid-area: files-page;
+  @apply relative grid-cols-files gap-5 !bg-transparent !grid rounded-xl p-0;
+}
+.files-page > div {
+  @apply p-[10px] rounded-xl bg-white pt-5;
+}
+.files-page i {
+  @apply text-[gray] self-start;
+}
+.files-page > div:hover img {
+  @apply rotate-[10deg];
+}
+.files-page img {
+  @apply transition-all;
+}

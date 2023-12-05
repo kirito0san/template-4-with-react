@@ -1,0 +1,42 @@
+.plan {
+  @apply text-white font-bold text-[1.8rem] !gap-5 w-full mb-[10px] py-[10px] border-[3px] border-white;
+}
+.plan p {
+  @apply w-fit relative;
+}
+.plan sup {
+  @apply absolute top-0 left-[-10px];
+}
+.plan.num1 {
+  @apply bg-backgroundcolor9 outline-backgroundcolor9 outline outline-[3px];
+}
+.plan.num2 {
+  @apply bg-backgroundcolor3 outline-backgroundcolor3 outline outline-[3px];
+}
+.plan.num3 {
+  @apply bg-backgroundcolor7 outline-backgroundcolor7 outline outline-[3px];
+}
+.fa-circle-exclamation {
+  @apply text-[gray] cursor-pointer;
+}
+.plax-box > div:not(:first-child, :last-child) {
+  @apply border-b-backgroundcolor2 border-b;
+}
+.plax-box > div:not(:first-child) {
+  @apply !p-0 h-[60px] items-center;
+}
+.plax-box a {
+  @apply w-fit mt-[10px] text-white !px-5 !py-2;
+}
+.plax-box:nth-of-type(1) a {
+  @apply bg-backgroundcolor9;
+}
+.plax-box:nth-of-type(2) a {
+  @apply bg-backgroundcolor3;
+}
+.plax-box {
+  @apply flex justify-center;
+}
+.plax-box > span {
+  @apply items-center flex justify-center h-[60px];
+}

@@ -1,0 +1,121 @@
+.Website {
+  @apply flex justify-between;
+}
+.website > * {
+  @apply basis-[40%];
+}
+#close-message {
+  @apply h-full resize-none outline-none rounded-xl;
+}
+.email {
+  @apply flex-grow;
+}
+label input {
+  @apply rounded-md border-black border;
+}
+#email {
+  @apply !normal-case cursor-not-allowed w-full bg-[#f0f4f8];
+}
+#change {
+  @apply font-semibold border-0 cursor-pointer bg-white text-backgroundcolor3;
+}
+.Security-Info div a.btn-shape {
+  @apply w-[80px] text-white h-fit text-[1.2rem];
+}
+.Security-Info div a.btn-shape:hover {
+  @apply brightness-[0.7];
+}
+.Security-Info div:nth-of-type(1) a.btn-shape {
+  @apply text-white bg-backgroundcolor3;
+}
+.Security-Info div:nth-of-type(3) a.btn-shape {
+  @apply text-black bg-backgroundcolor2;
+}
+.Social-Info div * {
+  @apply p-[10px];
+}
+.Social-Info div {
+  @apply flex border bg-[#ccc] border-[#ccc] rounded-md;
+}
+.Social-Info div input {
+  @apply w-full bg-transparent border-0 outline-none;
+}
+.Social-Info div i {
+  @apply w-[50px] border text-[1.5rem] border-[#aaa] transition-all;
+}
+.Social-Info div:focus-within i {
+  @apply text-black;
+}
+.Social-Info div:focus-within {
+  @apply bg-[#aaa];
+}
+.Widgets-Control label {
+  @apply cursor-pointer ml-[5px];
+}
+.Widgets-Control label:hover span {
+  @apply border-[#235a99];
+}
+.Widgets-Control label input {
+  @apply hidden;
+}
+.Widgets-Control label span {
+  @apply relative  rounded-md transition-[border-color] w-[30px] h-[30px] border-2 border-[#ccc];
+}
+.Widgets-Control label input:checked + span {
+  @apply border-white;
+}
+.Widgets-Control label span::after {
+  content: "\2714";
+
+  @apply justify-center scale-0 transition-all rounded-md translate-x-[-50%] translate-y-[-50%] absolute top-1/2 left-1/2 w-0 h-0 flex items-center;
+}
+.Widgets-Control label input:checked + span::after {
+  @apply scale-100 rotate-[3turn] w-full h-full text-[1rem] translate-x-[-50%] translate-y-[-50%] bg-backgroundcolor3 flex items-center justify-center text-white;
+}
+.Backup-Manager form:nth-of-type(1) label {
+  @apply cursor-pointer ml-[15px] mt-[15px];
+}
+.Backup-Manager form:nth-of-type(1) label:hover span {
+  @apply border-backgroundcolor3;
+}
+.Backup-Manager label input {
+  @apply hidden;
+}
+.circle {
+  content: "";
+  @apply relative scale-0 w-[50px] h-[50px] transition-all rounded-full;
+}
+.Backup-Manager form:nth-of-type(1) label > span {
+  @apply relative outline-[3px] outline-dashed transition-all outline-[#ccc] flex items-center justify-center rounded-full w-[35px] h-[35px];
+}
+.Backup-Manager form:nth-of-type(1) label input:checked + span {
+  @apply outline-backgroundcolor3;
+}
+
+.Backup-Manager form:nth-of-type(1) label input:checked + span span {
+  @apply scale-[0.7] w-full h-full text-white bg-backgroundcolor3;
+}
+
+form:nth-of-type(2) {
+  @apply flex-wrap grid grid-cols-fsd3;
+}
+@media (max-width: 767px) {
+  form:nth-of-type(2) {
+    @apply flex-wrap grid grid-cols-fsd;
+  }
+}
+form:nth-of-type(2) {
+  @apply flex-wrap;
+}
+form:nth-of-type(2) span {
+  @apply w-full h-full border-[3px] border-backgroundcolor2  cursor-pointer items-center justify-center flex rounded-md text-[1.2rem];
+}
+form:nth-of-type(2) input:checked + span {
+  @apply text-backgroundcolor3 border-backgroundcolor3;
+}
+form:nth-of-type(2) label {
+  @apply flex justify-center items-center h-[100px] p-[10px] rounded-xl;
+}
+form:nth-of-type(2) label {
+  @apply w-full basis-[30%];
+}

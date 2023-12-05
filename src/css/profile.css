@@ -1,0 +1,102 @@
+.containers.profile {
+  grid-template-areas:
+    "h1 h1"
+    "h2 h3";
+  grid-template-columns: 30% 68%;
+  @apply grid-cols-profilec;
+}
+
+.grids label {
+  @apply flex w-fit  justify-self-center;
+}
+@media (max-width: 370px) {
+  .profile > div {
+    @apply !p-[10px];
+  }
+}
+@media (min-width: 768px) {
+  .grids.center-a-flex-end {
+    @apply pl-5;
+  }
+}
+.fillav {
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+@media (max-width: 767px) {
+  .Latest-Activities > div div {
+    @apply flex-col items-center gap-5;
+  }
+  .Latest-Activities > div {
+    @apply gap-5 flex-col;
+  }
+  .flex-gap-5-row.flex-wrap {
+    @apply justify-center;
+  }
+  .containers.profile {
+    grid-template-areas:
+      "h1 "
+      "h2 "
+      "h3 ";
+
+    @apply grid-cols-[100%];
+  }
+
+  .profile > div:nth-of-type(1) {
+    @apply !flex-col;
+  }
+
+  .profile > div > div:nth-of-type(1) {
+    @apply !border-r-0;
+  }
+  .profile > div > div.grow-1:nth-of-type(2) {
+    @apply text-center;
+  }
+  .grids label {
+    @apply flex justify-center;
+  }
+  .profile .grids {
+    @apply gap-y-5;
+  }
+  .profile > div > div:nth-of-type(1) {
+    @apply !py-5;
+  }
+}
+.profile > div > div > img {
+  @apply w-[100px];
+}
+.profile {
+  /* grid-template-columns: repeat(1, 100%); */
+}
+.profile > div:nth-of-type(1) {
+  grid-area: h1;
+  @apply flex-row;
+}
+.profile > div:nth-of-type(1) > div:nth-of-type(1) {
+  @apply py-5 justify-center pr-5 border-r-backgroundcolor2;
+}
+
+.profile-prog {
+  @apply w-[150px] h-[5px] bg-backgroundcolor2 rounded-xl relative;
+}
+.profile-prog::after {
+  content: "";
+  @apply left-0 w-[80%] h-full absolute bg-backgroundcolor3 rounded-s-xl;
+}
+
+.profile .grids {
+  @apply grid justify-around gap-y-[10px] grid-cols-profile;
+}
+.profile .grids div {
+  @apply py-[10px];
+}
+
+.my-skill {
+  grid-area: h2;
+}
+.my-skill .btn-shape {
+  @apply bg-backgroundcolor2;
+}
+.Latest-Activities {
+  grid-area: h3;
+}
